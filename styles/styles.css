@@ -1,0 +1,40 @@
+body {
+	font-family: 'helvetica neue', helvetica, arial, sans-serif;
+	background: #fafafa;
+	color: #333;
+	padding: 1em 2em;
+}
+header, aside, section, footer {
+	display: block;
+}
+p, li {
+	line-height: 1.3em;
+	margin: 0 0 1em 0;
+}
+#app {
+	margin: 2em 0;
+	background: #9c9;
+	padding: 1em 2em;
+	overflow: auto;
+}
+a {
+	color: #666;
+}
+footer {
+	font-size: 0.8em;
+	padding-top: 4em;
+}
+canvas {
+    display: none;
+}
+#output a {
+  background: #030;
+  color: #fff;
+  padding: 1em;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 1.3em;
+}
+#output ul {
+  float: left;
+}
