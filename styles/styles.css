@@ -7,6 +7,9 @@ body {
 header, aside, section, footer {
 	display: block;
 }
+h1 {
+	font-weight: lighter;
+}
 p, li {
 	line-height: 1.3em;
 	margin: 0 0 1em 0;
@@ -22,6 +25,13 @@ p, li {
 }
 a {
 	color: #666;
+}
+input[type="file"] {
+	font-size: 1.8em;
+}
+strong {
+	background: #fcc;
+	padding: .2em .5em;
 }
 footer {
 	font-size: 0.8em;
