@@ -17,6 +17,9 @@ p, li {
 	padding: 1em 2em;
 	overflow: auto;
 }
+.dragdrop #app {
+	background: #393;
+}
 a {
 	color: #666;
 }

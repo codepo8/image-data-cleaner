@@ -7,10 +7,19 @@
   var cx = c.getContext('2d');
   var str = '';
   var i = 0;
+  var app = document.querySelector('#app');
 
-  fileinput.addEventListener('change', function(e) {
+  app.addEventListener('dragover', function(ev) {
+    document.body.classList.add('dragdrop');
+    ev.preventDefault();
+  }, false );
+  app.addEventListener('drop', getfile, false);
+  fileinput.addEventListener('change', getfile, false);
+
+  function getfile(e) {
+    document.body.classList.remove('dragdrop');
     i = 0;
-    var file = e.target.files[0];
+    var file = e.dataTransfer ? e.dataTransfer.files[0] : e.target.files[0];
     EXIF.getData(file, function() {
       str = '<ul>';
       var data = EXIF.getAllTags(this);
@@ -34,7 +43,9 @@
         output.innerHTML = 'Image is already clean!';
       }
     });
-  });
+    e.preventDefault();
+  }
+
   function loadImage(file, name) {
     var img = new Image();
     img.src = file;
@@ -46,7 +57,8 @@
     c.width = w;
     c.height = h;
     cx.drawImage(img, 0, 0, w, h);
+    var dlname = name.replace(/\.([^\.]+)$/,'-cleaned.jpg');
     out.innerHTML += '<a href="'+c.toDataURL('image/jpeg', 0.9)+'" '+
-    'download="'+name.split('.')[0]+'-cleaned.jpg'+'">Download clean image</a>';
+    'download="' + dlname + '">Download clean image</a>';
   }
 })();
