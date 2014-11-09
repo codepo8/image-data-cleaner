@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" manifest="photocleaner.appcache">
+<head>
+  <meta charset="UTF-8">
+  <title>Find out where a photo was taken</title>
+  <meta type="description" content="Show where a photo was taken">
+  <meta name="viewport" content="width=device-width">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <link rel="stylesheet" href="styles/styles.css" type="text/css">
+  <style type="text/css">
+  body {
+  	background: #111;
+  	color: #f8f8f8;
+  }
+  strong {
+  	background: #393;
+  	font-weight: normal;
+  }
+  #app {
+  	background: #666;
+  }
+  input[type=file] {
+  	font-size: 1em;
+  	margin: 20px 0;
+  }
+  #app a {
+  	margin-right: 1em;
+  }
+  #app strong {
+  	background: #fcc;
+  	color: #000;
+  }
+  </style>
+</head>
+<body>
+<header>
+  <h1>Display the location a photo was taken</h1>
+</header>  
+<section>
+<p><strong>Privacy disclaimer: your photo does not get uploaded anywhere, all of this happens on your device, in your browser. It even works offline.</strong></p>
+<p>Browse for your photo here and if there is geographical information in it, you'll see a map and get a link to Google maps.</p>
+
+<div id="app">
+<input id="getfile" type="file" />
+<div id="output"></div>
+<canvas></canvas>
+</div>
+
+</section>
+<footer>
+<p>Written by Chris Heilmann as an add-on to my <a href="https://www.youtube.com/watch?v=gnbLLQwZxeA">TEDx Talk about making social media more social again</a>. Uses <a href="https://github.com/jseidelin/exif-js">exif.js</a> by Jacob Seidelin.</p>
+</footer>
+<script src="scripts/exif.js"></script>
+<script src="scripts/phototomap.js"></script>
+</body>
+</html>

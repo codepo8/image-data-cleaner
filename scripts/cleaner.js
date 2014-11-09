@@ -23,7 +23,7 @@
     EXIF.getData(file, function() {
       str = '<ul>';
       var data = EXIF.getAllTags(this);
-      for (i in data) {
+      for (var i in data) {
         if (i === 'MakerNote') { continue; }
         disp = data[i];
         str += '<li>'+i+': '+disp+'</li>';

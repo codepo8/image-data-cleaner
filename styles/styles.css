@@ -41,6 +41,8 @@ canvas {
     display: none;
 }
 #output a {
+	display: inline-block;
+	margin-top: 1em;
   background: #030;
   color: #fff;
   padding: 1em;

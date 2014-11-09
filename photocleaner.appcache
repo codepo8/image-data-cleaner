@@ -1,0 +1,14 @@
+CACHE MANIFEST
+
+#7
+
+CACHE:
+index.html
+image-to-map.html
+styles/styles.css
+scripts/cleaner.js
+scripts/phototomap.js
+scripts/exif.js
+
+NETWORK:
+*
